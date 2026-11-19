@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "DSH YouTube 归档",
+  "version": "0.3.0",
+  "description": "把 Brave 中正在播放的 YouTube 视频（标题、频道、进度、字幕）发送给本机 DeepSeek Harness 插件，自动生成中文摘要并归档。",
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "https://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "injected-main.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "action": {
+    "default_title": "DSH YouTube 归档（点击打开设置）"
+  },
+  "options_page": "options.html"
+}

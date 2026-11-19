@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 依赖
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+
+# 运行产物 / 个人数据（绝不应该提交）
+.state/
+daily/
+demo-vault/
+.demo-vault/
+*.log
+
+# 本地环境
+.env
+.env.*
+.DS_Store?
+.idea/
+.vscode/
+
+# 构建 / 临时
+dist/
+tmp/
+*.zip
+*.tmp
+
+# 测试缓存
+coverage/
+.nyc_output/

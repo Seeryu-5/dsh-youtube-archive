@@ -1,0 +1,40 @@
+{
+  "name": "dsh-youtube-archive",
+  "version": "0.4.4",
+  "description": "Brave 里播放过的 YouTube 视频自动归档成带字幕、译文、段落笔记和英文表达的本地 Markdown 知识库（DeepSeek Harness 插件）",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "chenrumeng",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "deploy": "./scripts/deploy-local.sh"
+  },
+  "files": [
+    "lib",
+    "web",
+    "extension",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "使用手册.md",
+    "PRIVACY.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "youtube",
+    "brave",
+    "obsidian",
+    "markdown",
+    "knowledge-base",
+    "transcript",
+    "archive",
+    "local-first"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

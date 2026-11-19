@@ -1,0 +1,5 @@
+# dsh-youtube-archive bundle patch：把 host 插件行插入 profile 的插件清单。
+# 安装后由 DSH 的 bundle 机制加载；不要在 profile 的 cordis.patch.yml 里再 insert 同一 id。
+- insert:
+    - id: dsh-youtube-archive
+      name: 'dsh-youtube-archive'

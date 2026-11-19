@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DSH YouTube 归档 · 设置</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>DSH YouTube 归档</h1>
+      <p class="hint">
+        把 Brave 中正在播放的 YouTube 视频信息发送给本机 DeepSeek Harness 插件。仅在
+        <code>youtube.com</code> 页面运行，数据只发往 <code>127.0.0.1</code>。
+      </p>
+
+      <section class="card">
+        <label class="row">
+          <span>DSH 插件端口</span>
+          <input id="port" type="number" min="1024" max="65535" step="1" value="47821" />
+        </label>
+        <div class="actions">
+          <button id="save" type="button">保存</button>
+          <button id="test" type="button" class="secondary">测试连接</button>
+        </div>
+        <p id="status" class="status" role="status"></p>
+      </section>
+
+      <section class="card">
+        <label class="row checkbox">
+          <input id="paused" type="checkbox" />
+          <span>暂停监控（仍保留已保存的端口设置）</span>
+        </label>
+        <p class="hint small">暂停后不会向 DSH 发送任何播放事件；重新勾选即可恢复。</p>
+      </section>
+
+      <section class="card">
+        <h2>连接状态</h2>
+        <pre id="health">尚未检测。</pre>
+      </section>
+
+      <section class="card">
+        <h2>首次使用</h2>
+        <ol class="hint small">
+          <li>确认 DeepSeek Harness 已安装并加载 <code>dsh-youtube-archive</code> 插件。</li>
+          <li>打开 <code>brave://extensions</code>，开启“开发者模式”，加载本目录。</li>
+          <li>在 DSH 里调用 <code>youtube_archive_status</code>，应显示“扩展已连接”。</li>
+          <li>播放任意 YouTube 视频超过 45 秒，笔记会出现在输出目录。</li>
+        </ol>
+      </section>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>
