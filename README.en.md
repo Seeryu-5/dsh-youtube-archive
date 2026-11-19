@@ -46,7 +46,7 @@ Effective watch time is media time: paused, seeking and muted-background time do
 Requirements: macOS, Brave, and a working DeepSeek Harness desktop install.
 
 ```bash
-git clone https://github.com/<your-name>/dsh-youtube-archive.git
+git clone https://github.com/Seeryu-5/dsh-youtube-archive.git
 cd dsh-youtube-archive
 
 # adjust the CLI path to your DSH installation

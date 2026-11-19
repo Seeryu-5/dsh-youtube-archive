@@ -115,7 +115,7 @@ flowchart LR
 ### 1. 安装 DSH 插件
 
 ```bash
-git clone https://github.com/<your-name>/dsh-youtube-archive.git
+git clone https://github.com/Seeryu-5/dsh-youtube-archive.git
 cd dsh-youtube-archive
 
 # DSH CLI 的路径以你的安装位置为准
